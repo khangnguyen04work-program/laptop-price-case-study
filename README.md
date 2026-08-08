@@ -80,4 +80,6 @@ jupyter notebook code/eda.ipynb
 
 ## License
 
-MIT License — feel free to use and modify.
+This project uses the **Kaggle Laptop Price dataset (CC0 - Public Domain)**.
+
+The analysis code and documentation in this repository are also released under **CC0** - you may freely use, modify, and distribute without attribution.
