@@ -22,16 +22,18 @@ This project analyzes 1,274 laptop records (after deduplication) to identify whi
 | `CPU` | `CPU_brand` (Intel / AMD) |
 | `GPU` | `GPU_brand` (Intel / Nvidia / AMD), `GPU_model` |
 | `Company` | Categorical (Apple, Dell, HP, Lenovo, Asus, Acer, etc.) |
-| `Type_Name` | Categorical (Ultrabook, Notebook, 2 in 1 Convertible, Netbook) |
+| `Type_Name` | Categorical (Workstation, Gaming, Ultrabook, 2 in 1 Convertible, Notebook, Netbook) |
 | `Inches` | Numeric (10.1–18.4) |
 
 *Columns not parsed in this analysis: `Screen_Resolution`, `Memory` (storage), `Operating_System` — kept as raw strings.*
 
 ## Key Findings
 
-1. **Laptop Type drives price**: 2-in-1 Convertibles (~₹75K) > Ultrabooks (~₹68K) > Notebooks (~₹42K) > Netbooks (~₹25K)
-2. **Weight negatively correlates with price** (r = -0.45): lighter laptops command premium prices
-3. **Intel CPUs average higher prices** than AMD (Intel ~₹65K vs AMD ~₹35K)
+Based on the deduplicated dataset (1,274 rows):
+
+1. **Laptop Type drives price**: Workstations (~₹121K) > Gaming (~₹92K) > Ultrabooks (~₹83K) > 2-in-1 Convertibles (~₹69K) > Notebooks (~₹42K) > Netbooks (~₹36K)
+2. **Weight positively correlates with price** (r = +0.21): heavier laptops tend to be more expensive, as they often house dedicated GPUs, larger batteries, and better cooling for gaming/workstation performance
+3. **Intel CPUs average higher prices** than AMD (Intel ~₹62K vs AMD ~₹30K); Samsung appears once at ~₹35K
 4. **Nvidia GPUs carry significant premium** over Intel/AMD integrated graphics
 5. **Screen size weakly correlates with price** (r = 0.18) — not a strong driver alone
 6. **RAM has strong price relationship**: each additional 8GB adds ~₹15K–₹20K on average
